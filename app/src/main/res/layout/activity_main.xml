@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.aqua.copy_url.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="*" >
+
+            <TableRow android:layout_width="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="URL:"
+                    android:gravity="center_vertical|right"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <EditText
+                    android:id="@+id/txtIP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_span="2"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="172.18.3.211/Public/work/URL/" />
+
+                <Button
+                    android:id="@+id/btnOpen"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:onClick="btnOpenClick"
+                    android:text="OPEN" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="8">
+
+                <ListView
+                    android:id="@+id/showList"
+                    android:layout_height="wrap_content"
+                    android:layout_span="4" />
+            </TableRow>
+
+
+        </TableLayout>
+    </FrameLayout>
+
+</LinearLayout>
